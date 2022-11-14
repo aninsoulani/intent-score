@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/OrangeRed"
     tools:context=".MainActivity">
 
     <TextView
@@ -11,7 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Half Live Score"
+        android:text="Aplikasi Penghitung Skor"
+        android:textStyle="bold"
+        android:textColor="@color/BlanchedAlmond"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,28 +22,31 @@
 
     <EditText
         android:id="@+id/home_team"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:inputType="textPersonName"
-        android:text="Home Team"
+        android:gravity="center_horizontal"
+        android:hint="Masukkan nama tim 1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/away_team"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="120dp"
+        android:gravity="center_horizontal"
+        android:hint="Masukkan nama tim 2"
         android:inputType="textPersonName"
-        android:text="Away Team"
         app:layout_constraintBottom_toTopOf="@+id/btn_team"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.500"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -50,30 +56,34 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        android:text="Next"
+        android:background="@drawable/roundedhasil"
+        android:backgroundTint="@color/BlanchedAlmond"
+        android:text="Selanjutnya"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/home_logo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/home_team"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        android:src="@drawable/pilihgambar" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/away_logo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         app:layout_constraintBottom_toTopOf="@+id/away_team"
 
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.500"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/home_logo"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        app:layout_constraintVertical_bias="0.786"
+        android:src="@drawable/pilihgambar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
